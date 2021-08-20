@@ -1,10 +1,9 @@
-import React from "react";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-import logo from "./logo.svg";
-import "./App.css";
-import Home from "./pages/Home";
+import React, { FC } from 'react';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import './App.css';
+import Home from './pages/Home';
 
-function App() {
+const App: FC = () => {
   return (
     <Router>
       <Switch>
@@ -12,6 +11,6 @@ function App() {
       </Switch>
     </Router>
   );
-}
+};
 
 export default App;

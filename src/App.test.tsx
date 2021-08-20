@@ -1,8 +1,15 @@
-import App from "./App";
-import { shallow } from "enzyme";
+import { shallow } from 'enzyme';
+import { Route } from 'react-router-dom';
+import App from './App';
 
-test("renders learn react link", () => {
+test('Routes match snapshot', () => {
   const wrapper = shallow(<App />);
-  console.log(wrapper.text());
-  expect(wrapper.text().includes("Learn React")).toBe(true);
+
+  // Simulate scenario: to inform when routes added/removed/changed by peers
+  expect(wrapper.find(Route).map((node) => node.prop('path')))
+    .toMatchInlineSnapshot(`
+    Array [
+      "/",
+    ]
+  `);
 });

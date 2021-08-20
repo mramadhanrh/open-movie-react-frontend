@@ -9,9 +9,11 @@ const composeEnhancers = composeWithDevTools({
 
 const middleware = applyMiddleware(thunk);
 
-export const stores = createStore(
+const stores = createStore(
   reducers,
   process.env.NODE_ENV === "development"
     ? composeEnhancers(middleware)
     : middleware
 );
+
+export default stores;
