@@ -4,14 +4,36 @@
     "prettier/prettier": [
       "error",
       { "printWidth": 80, "singleQuote": true, "trailingComma": "all" }
-    ]
+    ],
+    "react/react-in-jsx-scope": "off",
+    "arrow-body-style": "warn",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-empty-function": "off"
   },
   "overrides": [
+    {
+      "files": ["src/setupTests.ts"],
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
+      }
+    },
     {
       "files": ["*.spec.ts", "*.spec.tsx", "*.test.ts", "*.test.tsx"],
       "rules": {
         "import/no-extraneous-dependencies": "off",
         "react/react-in-jsx-scope": "off"
+      }
+    },
+    {
+      "files": [
+        "style.ts",
+        "src/services/*.ts",
+        "src/interfaces/*.ts",
+        "src/constants/*.ts",
+        "src/redux/actions/*.ts"
+      ],
+      "rules": {
+        "import/prefer-default-export": "off"
       }
     }
   ]

@@ -1,16 +1,14 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 
-const App: FC = () => {
-  return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Home} />
-      </Switch>
-    </Router>
-  );
-};
+const App: FC = () => (
+  <Router>
+    <Switch>
+      <Route exact path="/" component={Home} />
+    </Switch>
+  </Router>
+);
 
 export default App;
