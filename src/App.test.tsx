@@ -10,6 +10,7 @@ test('Routes match snapshot', () => {
     .toMatchInlineSnapshot(`
     Array [
       "/",
+      "/:movieId",
     ]
   `);
 });

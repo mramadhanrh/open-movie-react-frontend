@@ -1,8 +1,9 @@
-import { MovieItem } from '../../interfaces/movie';
+import { MovieDetailResponse, MovieItem } from '../../interfaces/movie';
 
 export enum MovieType {
   SetMovieList = '@movie/set-list',
   AddMovieList = '@movie/add-list',
+  SetMovieDetail = '@movie/set-detail',
 }
 
 export interface MovieSetList {
@@ -15,4 +16,9 @@ export interface MovieAddList {
   payload: MovieItem[];
 }
 
-export type MovieAction = MovieSetList | MovieAddList;
+export interface MovieSetDetail {
+  type: MovieType.SetMovieDetail;
+  payload: MovieDetailResponse;
+}
+
+export type MovieAction = MovieSetList | MovieAddList | MovieSetDetail;

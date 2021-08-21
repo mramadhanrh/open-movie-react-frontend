@@ -23,7 +23,7 @@ export const InfoWrapper = styled.div`
 
   & > h1 {
     font-size: 24px;
-    margin: 0;
+    margin: 0 0 10px;
   }
 `;
 

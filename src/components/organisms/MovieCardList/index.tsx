@@ -6,11 +6,15 @@ import { Container } from './style';
 
 interface MovieCardListProps {
   data: MovieItem[];
+  onMovieClick?(id: string): void;
 }
 
 const { label: emptyLabel, src: emptySrc } = MovieEmptyPicture;
 
-const MovieCardList: FC<MovieCardListProps> = ({ data = [] }) => (
+const MovieCardList: FC<MovieCardListProps> = ({
+  data = [],
+  onMovieClick = () => {},
+}) => (
   <Container>
     {data.map(({ imdbID, Title, Poster, Year, Type }) => (
       <MovieCard
@@ -20,6 +24,7 @@ const MovieCardList: FC<MovieCardListProps> = ({ data = [] }) => (
         picture={Poster === emptyLabel ? emptySrc : Poster}
         type={Type}
         year={Year}
+        onClick={onMovieClick}
       />
     ))}
   </Container>

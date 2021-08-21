@@ -1,5 +1,6 @@
 import { FC, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { AnyAction } from 'redux';
 import { ThunkDispatch } from 'redux-thunk';
 import SearchBar from '../../components/molecules/SearchBar';
@@ -14,6 +15,7 @@ import { movieListSelector } from '../../redux/selectors/movie';
 type SearchSubmitType = Parameters<typeof SearchBar>[0]['onSubmit'];
 
 const Home: FC = () => {
+  const history = useHistory();
   const dispatch = useDispatch<ThunkDispatch<AppStateType, null, AnyAction>>();
   const movieList = useSelector(movieListSelector);
   const [searchData, setSearchData] = useState({
@@ -47,10 +49,14 @@ const Home: FC = () => {
     setEndOfPages(false);
   };
 
+  const handleMovieClick = (id: string) => {
+    history.push(`/${id}`);
+  };
+
   return (
     <PageFrame>
       <SearchBar onSubmit={handleSearchSubmit} />
-      <MovieCardList data={movieList} />
+      <MovieCardList data={movieList} onMovieClick={handleMovieClick} />
       {movieLoading && <h1>Loading Data... </h1>}
       {isEndOfPages && <h1>Reach end of page</h1>}
     </PageFrame>
