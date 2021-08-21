@@ -9,7 +9,7 @@ const initialState = {
   list: [],
 };
 
-const { SetMovieList } = MovieType;
+const { SetMovieList, AddMovieList } = MovieType;
 
 const movie = (
   state: MovieState = initialState,
@@ -30,6 +30,8 @@ const movie = (
   switch (type) {
     case SetMovieList:
       return setMovieList();
+    case AddMovieList:
+      return addMovieList();
     default:
       return state;
   }

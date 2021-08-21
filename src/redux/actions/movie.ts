@@ -46,7 +46,7 @@ export const loadMovieAddList =
   > => {
     try {
       const res = await getMovieList(search, page, type);
-      dispatch(setMovieList(res.data.Search));
+      dispatch(setAddMovieList(res.data.Search));
 
       return [res.data, null];
     } catch (e) {

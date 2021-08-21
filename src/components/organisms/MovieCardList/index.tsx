@@ -12,8 +12,10 @@ const { label: emptyLabel, src: emptySrc } = MovieEmptyPicture;
 
 const MovieCardList: FC<MovieCardListProps> = ({ data = [] }) => (
   <Container>
-    {data.map(({ Title, Poster, Year, Type }) => (
+    {data.map(({ imdbID, Title, Poster, Year, Type }) => (
       <MovieCard
+        key={imdbID}
+        id={imdbID}
         title={Title}
         picture={Poster === emptyLabel ? emptySrc : Poster}
         type={Type}
