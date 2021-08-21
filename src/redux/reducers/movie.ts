@@ -22,6 +22,11 @@ const movie = (
     list: payload,
   });
 
+  const addMovieList = (): MovieState => ({
+    ...state,
+    list: [...state.list, ...(payload || [])],
+  });
+
   switch (type) {
     case SetMovieList:
       return setMovieList();

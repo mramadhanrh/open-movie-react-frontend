@@ -30,7 +30,8 @@
         "src/services/*.ts",
         "src/interfaces/*.ts",
         "src/constants/*.ts",
-        "src/redux/actions/*.ts"
+        "src/redux/actions/*.ts",
+        "src/redux/selectors/*.ts"
       ],
       "rules": {
         "import/prefer-default-export": "off"

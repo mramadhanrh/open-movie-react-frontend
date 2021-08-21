@@ -4,7 +4,7 @@ import { endpoint } from '../constants/apiRoutes';
 const omdb = axios.create({
   baseURL: endpoint.omdbApi,
   params: {
-    apiKey: 'faf7e5bb',
+    apiKey: 'acc12812',
   },
 });
 
