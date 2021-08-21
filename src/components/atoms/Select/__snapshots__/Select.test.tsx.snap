@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select match snapshot 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "buttonColor": Object {
+        "primary": "#754600",
+        "secondary": "#F86F22",
+        "text": "transparent",
+      },
+      "buttonTextColor": Object {
+        "primary": "#FFFFFF",
+        "secondary": "#000000",
+        "text": "#000000",
+      },
+      "color": Object {
+        "athensGray": "#E6E8EC",
+        "black": "#000000",
+        "bridalHeath": "#FFF9F0",
+        "chelseaGem": "#A46200",
+        "coal": "#2B2B2B",
+        "ecstasy": "#F86F22",
+        "mischka": "#D7D8DE",
+        "pizzaz": "#FB8C00",
+        "primary": "#754600",
+        "sandyBeach": "#FFEACA",
+        "secondary": "#F86F22",
+        "tussock": "#BB883C",
+        "white": "#FFFFFF",
+      },
+      "textColor": Object {
+        "primary": "#754600",
+        "secondary": "#F86F22",
+        "tertiary": "#2B2B2B",
+      },
+    }
+  }
+>
+  <styled.select
+    defaultValue={1}
+  >
+    <styled.option
+      value={1}
+    >
+      Value 1
+    </styled.option>
+    <styled.option
+      value={2}
+    >
+      Value 2
+    </styled.option>
+    <styled.option
+      value={3}
+    >
+      Value 3
+    </styled.option>
+  </styled.select>
+</ContextProvider>
+`;

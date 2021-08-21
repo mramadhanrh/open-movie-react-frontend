@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieCard match snapshot 1`] = `
+<styled.button
+  onClick={[Function]}
+>
+  <styled.img
+    src="picture-url"
+  />
+  <styled.div>
+    <h1>
+      Title
+    </h1>
+    <styled.div>
+      <styled.div
+        color="primary"
+      >
+        movie
+      </styled.div>
+      <styled.div>
+        1998
+      </styled.div>
+    </styled.div>
+  </styled.div>
+</styled.button>
+`;
